@@ -27,7 +27,12 @@
               g.GetComponent<Rigidbody2D>().gravityScale = -10;
           }
 
+
+
         /* play sound  first add AudioSource Component */
+        *****1  PlayClipAtPoint(clip, pos)
+        AudioSource.PlayClipAtPoint(blockHitAudio, Camera.main.transform.position);
+        ---------------------------------------------------
         [SerializeField] AudioClip PaddleHitAudio;
         AudioSource audioSource;
         start(){
