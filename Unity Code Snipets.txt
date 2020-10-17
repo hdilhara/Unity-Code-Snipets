@@ -1,0 +1,7 @@
+circle[] triggers = FindObjectsOfType<circle>();//GetComponent<Rigidbody2D>().gravityScale = -10;
+            foreach (circle t in triggers)
+            {
+                t.GetComponent<Rigidbody2D>().gravityScale = 10;
+            }
+
+
