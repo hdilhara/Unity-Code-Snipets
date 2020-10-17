@@ -34,3 +34,6 @@
             gameObject.GetComponent<AudioSource>().clip = PaddleHitAudio ;
             gameObject.GetComponent<AudioSource>().Play();
         }
+        //PlayOneShot() not to distrub sounds; Its require clip as arg
+        gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+        
