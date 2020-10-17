@@ -22,7 +22,15 @@
 
          GameObject[] greenBalls = GameObject.FindGameObjectsWithTag("GreenBall");
 
-            foreach (GameObject g in greenBalls)
-            {
-                g.GetComponent<Rigidbody2D>().gravityScale = -10;
-            }
+         foreach (GameObject g in greenBalls)
+          {
+              g.GetComponent<Rigidbody2D>().gravityScale = -10;
+          }
+
+        /* play sound  first add AudioSource Component */
+        [SerializeField] AudioClip PaddleHitAudio;
+        if(gameHasStarted && collision.gameObject.name.Equals("Paddle"))
+        {
+            gameObject.GetComponent<AudioSource>().clip = PaddleHitAudio ;
+            gameObject.GetComponent<AudioSource>().Play();
+        }
