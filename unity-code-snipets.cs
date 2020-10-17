@@ -29,11 +29,15 @@
 
         /* play sound  first add AudioSource Component */
         [SerializeField] AudioClip PaddleHitAudio;
+        AudioSource audioSource;
+        start(){
+            audioSource = gameObject.GetComponent<AudioSource>();
+        }
         if(gameHasStarted && collision.gameObject.name.Equals("Paddle"))
         {
-            gameObject.GetComponent<AudioSource>().clip = PaddleHitAudio ;
-            gameObject.GetComponent<AudioSource>().Play();
+            audioSource.clip = PaddleHitAudio ;
+            audioSource.Play();
         }
         //PlayOneShot() not to distrub sounds; Its require clip as arg
-        gameObject.GetComponent<AudioSource>().PlayOneShot(gameObject.GetComponent<AudioSource>().clip);
+        audioSource.PlayOneShot(audioSource.clip);
         
