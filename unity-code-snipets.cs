@@ -18,7 +18,7 @@
         }
 
 
-         /*Reference Objects by its TAG type ( i.e. Script type )*/
+         /*Reference Objects by its TAG type */
 
          GameObject[] greenBalls = GameObject.FindGameObjectsWithTag("GreenBall");
 
