@@ -39,6 +39,22 @@
         if(gameHasStarted && collision.gameObject.name.Equals("Paddle"))
         {
             audioSource.clip = PaddleHitAudio ;
+                
+        
+        /* Singelton - Make a script singelton */
+            private void Awake()
+            {
+                int noOfInstances = FindObjectsOfType<SingeltonExample>().Length;
+                if (noOfInstances > 1)
+                {
+                    gameObject.SetActive(false);
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    DontDestroyOnLoad(gameObject);
+                }
+            }
             audioSource.Play();
         }
         //PlayOneShot() not to distrub sounds; Its require clip as arg
