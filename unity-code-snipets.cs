@@ -39,6 +39,8 @@
         if(gameHasStarted && collision.gameObject.name.Equals("Paddle"))
         {
             audioSource.clip = PaddleHitAudio ;
+       //PlayOneShot() not to distrub sounds; Its require clip as arg
+        audioSource.PlayOneShot(audioSource.clip);
                 
         
         /* Singelton - Make a script singelton */
@@ -57,8 +59,7 @@
             }
             audioSource.Play();
         }
-        //PlayOneShot() not to distrub sounds; Its require clip as arg
-        audioSource.PlayOneShot(audioSource.clip);
+       
 
         
         /* Get mouse position in world units */
