@@ -19,14 +19,12 @@
 
 
          /*Reference Objects by its TAG type */
-
          GameObject[] greenBalls = GameObject.FindGameObjectsWithTag("GreenBall");
 
          foreach (GameObject g in greenBalls)
           {
               g.GetComponent<Rigidbody2D>().gravityScale = -10;
           }
-
 
 
         /* play sound  first add AudioSource Component */
@@ -45,4 +43,8 @@
         }
         //PlayOneShot() not to distrub sounds; Its require clip as arg
         audioSource.PlayOneShot(audioSource.clip);
+
+        
+        /* Get mouse position in world units */
+        Camera.main.ScreenToWorldPoint(Input.mouse.position);
         
