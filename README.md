@@ -11,7 +11,7 @@ https://freesound.org/people/GameAudio/sounds/220201/
 https://itch.io/game-assets/free
 
 ======characters ======
-https://www.gameart2d.com/sprites.html
+https://craftpix.net/download/15581/
 
 ====== unity asset store ========
 - i've download joystic in here for game.
