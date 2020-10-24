@@ -65,3 +65,10 @@
         /* Get mouse position in world units */
         Camera.main.ScreenToWorldPoint(Input.mouse.position);
         
+
+/*Check Collide with spesific tag*/
+ void OnCollisionEnter (Collider target) {
+      if( target.gameObject.tag.Equals("water") == true ){
+           collisionTime = Time.time;
+      }
+ }
